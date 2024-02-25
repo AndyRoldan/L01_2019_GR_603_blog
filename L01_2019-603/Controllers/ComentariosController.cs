@@ -167,19 +167,6 @@ namespace L01_2019_603.Controllers
 
             return comentarios;
         }
-        /*[HttpGet]
-        [Route("BUSCAR POR PUBLICACION ID")]
-        public IActionResult Get(int id)
-        {
-            Calificaciones? equipo = (from e in _labContexto.Calificaciones
-                                      where e.publicacionId == id
-                                      select e).FirstOrDefault();
-
-            if (equipo == null)
-            {
-                return NotFound();
-            }
-            return Ok(equipo);
-        }*/
+        
     }
 }
