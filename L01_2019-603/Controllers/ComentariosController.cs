@@ -153,7 +153,7 @@ namespace L01_2019_603.Controllers
         }
 
         
-        [HttpGet("Usuario/{id}")]
+        [HttpGet("BUSCAR POR ID ")]
         public async Task<ActionResult<IEnumerable<Comentarios>>> ObtenerComentariosPorUsuario(int id)
         {
             var comentarios = await _labContexto.Comentarios
