@@ -93,7 +93,7 @@ namespace L01_2019_603.Controllers
             try
             {
                 // Buscar el usuario en la base de datos por su ID
-                Calificaciones equipoActual = _labContexto.Calificaciones.FirstOrDefault(e => e.calificacionId == id);
+                Calificaciones? equipoActual = _labContexto.Calificaciones.FirstOrDefault(e => e.calificacionId == id);
 
                 // Verificar si se encontró el usuario
                 if (equipoActual == null)
@@ -152,7 +152,7 @@ namespace L01_2019_603.Controllers
             return Ok(usuarios);
 
         }
-        [HttpGet("FILTRAR POR PUNLICACION EN ESPECIFICO")]
+        [HttpGet("FILTRAR POR UNA PUBLICACION EN ESPECIFICO")]
         public async Task<ActionResult<IEnumerable<Calificaciones>>> ObtenerCalificacionesPorPublicacion(int id)
         {
             var calificaciones = await _labContexto.Calificaciones
